@@ -72,6 +72,7 @@ func CheckWebsiteChanges(url string) error {
 			log.Printf("No changes detected for website %s", url)
 		}
 	} else {
+		// logic insert new website duplicate
 		screenshotName := fmt.Sprintf("screenshot_%d.png", time.Now().Unix())
 		err = TakeScreenshot(url, screenshotName)
 		if err != nil {
